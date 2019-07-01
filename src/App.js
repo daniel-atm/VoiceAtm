@@ -13,6 +13,7 @@ import Withdrawal from './components/Withdrawal';
 import TakeCash from './components/TakeCash';
 import alertify from 'alertifyjs';
 import Transfer from './components/Transfer';
+import HaveNiceDay from './components/HaveNiceDay';
 
 class App extends Component {
   step = '';
@@ -41,6 +42,9 @@ class App extends Component {
   showTakeCash = () => {
     this.setStep("take_cash");
   }
+  showHaveNiceDay = () => {
+    this.setStep("have_nice_day");
+  }
   nextAfterAccountType= ()=>{
     this.setStep(this.type.toLowerCase())
   }
@@ -61,9 +65,10 @@ class App extends Component {
           {this.step === 'select_transaction' ? <SelectTransaction next={this.showSelectAccountType} setType={this.setType} /> : null}
           {this.step === 'select_account_type' ? <SelectAccountType next={this.nextAfterAccountType} /> : null}
           {/* Next after select account type */}
-          {this.step === 'transfer' ? <Transfer next={this.showTakeCash} /> : null}
+          {this.step === 'transfer' ? <Transfer next={this.showHaveNiceDay} /> : null}
           {this.step === 'withdrawal' ? <Withdrawal next={this.showTakeCash} /> : null}
-          {this.step === 'take_cash' ? <TakeCash next={this.nextAfterAccountType}  /> : null}
+          {this.step === 'take_cash' ? <TakeCash next={this.showHaveNiceDay}  /> : null}
+          {this.step === 'have_nice_day' ? <HaveNiceDay  /> : null}
         </Card>
       </div>
     );
