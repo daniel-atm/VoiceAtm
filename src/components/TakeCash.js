@@ -5,14 +5,13 @@ import { withRouter } from 'react-router-dom';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import { Button } from '@material-ui/core';
+import { sleep } from '../utils/sleep';
 class TakeCash extends Component {
-    amount = ''
-    setAmount = (amount)=>{
-        this.amount=amount
-    }
-    componentDidMount() {
+    async componentDidMount() {
         const { robot, next } = this.props;
-        robot.say("Please take your cash!")
+        await robot.say("Please take your cash!")
+        await sleep(200);
+        next()
     }
 
     render() {
@@ -29,9 +28,5 @@ class TakeCash extends Component {
 
 export default withRouter(inject('robot')(
     observer(decorate(TakeCash, {
-        amount: observable,
-        setAmount: action,
-        password: observable,
-        setPassword: action
     }))
 ));
