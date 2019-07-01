@@ -1,14 +1,14 @@
 {
-  "main.css": "/VoiceATM/static/css/main.4b828879.chunk.css",
-  "main.js": "/VoiceATM/static/js/main.d9bf8184.chunk.js",
-  "main.js.map": "/VoiceATM/static/js/main.d9bf8184.chunk.js.map",
-  "static/js/1.8e9286a1.chunk.js": "/VoiceATM/static/js/1.8e9286a1.chunk.js",
-  "static/js/1.8e9286a1.chunk.js.map": "/VoiceATM/static/js/1.8e9286a1.chunk.js.map",
+  "main.css": "/VoiceATM/static/css/main.b9a3184d.chunk.css",
+  "main.js": "/VoiceATM/static/js/main.8901cea7.chunk.js",
+  "main.js.map": "/VoiceATM/static/js/main.8901cea7.chunk.js.map",
+  "static/js/1.c812e9dd.chunk.js": "/VoiceATM/static/js/1.c812e9dd.chunk.js",
+  "static/js/1.c812e9dd.chunk.js.map": "/VoiceATM/static/js/1.c812e9dd.chunk.js.map",
   "runtime~main.js": "/VoiceATM/static/js/runtime~main.24415e39.js",
   "runtime~main.js.map": "/VoiceATM/static/js/runtime~main.24415e39.js.map",
   "static/media/App.css": "/VoiceATM/static/media/background.22a8cce2.gif",
-  "static/css/main.4b828879.chunk.css.map": "/VoiceATM/static/css/main.4b828879.chunk.css.map",
+  "static/css/main.b9a3184d.chunk.css.map": "/VoiceATM/static/css/main.b9a3184d.chunk.css.map",
   "index.html": "/VoiceATM/index.html",
-  "precache-manifest.040952693828e204091017080cb936af.js": "/VoiceATM/precache-manifest.040952693828e204091017080cb936af.js",
+  "precache-manifest.1c5a9634cdee93b94e7c57074ad39ad8.js": "/VoiceATM/precache-manifest.1c5a9634cdee93b94e7c57074ad39ad8.js",
   "service-worker.js": "/VoiceATM/service-worker.js"
 }

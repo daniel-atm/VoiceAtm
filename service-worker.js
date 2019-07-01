@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/VoiceATM/precache-manifest.040952693828e204091017080cb936af.js"
+  "/VoiceATM/precache-manifest.1c5a9634cdee93b94e7c57074ad39ad8.js"
 );
 
 workbox.clientsClaim();
