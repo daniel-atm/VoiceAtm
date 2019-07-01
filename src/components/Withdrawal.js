@@ -37,7 +37,7 @@ class Withdrawal extends Component {
                 <h1 style={{ color: 'blue', textAlign: 'center' }}>Enter Amount</h1>
                 <form onSubmit={next} style={{ textAlign: 'center' }}>
                     <FormControl margin="normal" required fullWidth style={{ border: '3px solid blue' }}>
-                        <Input type='number'  name="amount" autoFocus onChange={(e)=>{  this.setAmount(e.target.value)   }} value={this.amount} />
+                        <Input type='number'  name="amount" autoFocus onChange={(e)=>{  this.setAmount(e.target.value)   }} value={this.amount} required />
                     </FormControl>
                 </form>
             </div>
