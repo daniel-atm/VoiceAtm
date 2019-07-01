@@ -11,8 +11,13 @@ import { MenuItem, InputLabel } from '@material-ui/core';
 class Transfer extends Component {
     amount = ''
     bank = ''
+    account_number = ''
     setAmount = (amount)=>{
         this.amount=amount
+    }
+    
+    setAccountNumber = (account_number)=>{
+        this.account_number=account_number
     }
     setBank = (bank)=>{
         console.log(bank)
@@ -33,11 +38,16 @@ class Transfer extends Component {
                 <h1 style={{ color: 'blue', textAlign: 'center' }}>Please enter recipient account number</h1>
                 <form onSubmit={next} style={{ textAlign: 'center' }}>
                     <FormControl margin="normal" required fullWidth style={{ border: '3px solid blue' }}>
-                        <Input type='number'  name="amount" autoFocus onChange={(e)=>{  this.setAmount(e.target.value)   }} value={this.amount} required />
+                        <InputLabel htmlFor="amount">Amount(#)</InputLabel>
+                        <Input type='number' id='amount'  name="amount" autoFocus onChange={(e)=>{  this.setAmount(e.target.value)   }} value={this.amount} required />
+                    </FormControl>
+                    <FormControl margin="normal" required fullWidth style={{ border: '3px solid blue' }}>
+                        <InputLabel htmlFor="account_number">Account Number</InputLabel>
+                        <Input type='number' id='account_number'  name="account_number" autoFocus onChange={(e)=>{  this.setAccountNumber(e.target.value)   }} value={this.account_number} required />
                     </FormControl>
                     <FormControl margin="normal" required fullWidth style={{ border: '3px solid blue' }}>
                         <InputLabel htmlFor="bank-helper">Select Recipient Bank</InputLabel>
-                        <Select required value={this.bank} onChange={(e)=>{  this.setBank(e.target.value)   }} input={<Input name="bank" id="bank-helper" />}>
+                        <Select required value={this.bank} onChange={(e)=>{  this.setBank(e.target.value)   }} id='bank-helper'>
                             <MenuItem value="" disabled selected>Select Recipient Bank</MenuItem>
                             <MenuItem value={'First Bank of Nigeria'}>First Bank of Nigeria</MenuItem>
                             <MenuItem value={'Guarantee Trust Bank'}>Guarantee Trust Bank</MenuItem>
@@ -60,6 +70,8 @@ export default withRouter(inject('robot')(
         bank: observable,
         amount: observable,
         setAmount: action,
-        setBank: action
+        setBank: action,
+        account_number: observable,
+        setAccountNumber: action,
     }))
 ));
