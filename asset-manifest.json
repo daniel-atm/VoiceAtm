@@ -1,14 +1,14 @@
 {
-  "main.css": "/VoiceATM/static/css/main.b9a3184d.chunk.css",
-  "main.js": "/VoiceATM/static/js/main.8901cea7.chunk.js",
-  "main.js.map": "/VoiceATM/static/js/main.8901cea7.chunk.js.map",
-  "static/js/1.c812e9dd.chunk.js": "/VoiceATM/static/js/1.c812e9dd.chunk.js",
-  "static/js/1.c812e9dd.chunk.js.map": "/VoiceATM/static/js/1.c812e9dd.chunk.js.map",
-  "runtime~main.js": "/VoiceATM/static/js/runtime~main.24415e39.js",
-  "runtime~main.js.map": "/VoiceATM/static/js/runtime~main.24415e39.js.map",
-  "static/media/App.css": "/VoiceATM/static/media/background.22a8cce2.gif",
-  "static/css/main.b9a3184d.chunk.css.map": "/VoiceATM/static/css/main.b9a3184d.chunk.css.map",
-  "index.html": "/VoiceATM/index.html",
-  "precache-manifest.1c5a9634cdee93b94e7c57074ad39ad8.js": "/VoiceATM/precache-manifest.1c5a9634cdee93b94e7c57074ad39ad8.js",
-  "service-worker.js": "/VoiceATM/service-worker.js"
+  "main.css": "/VoiceAtm/static/css/main.bf2e9f8d.chunk.css",
+  "main.js": "/VoiceAtm/static/js/main.2af75932.chunk.js",
+  "main.js.map": "/VoiceAtm/static/js/main.2af75932.chunk.js.map",
+  "static/js/1.f09e6fa9.chunk.js": "/VoiceAtm/static/js/1.f09e6fa9.chunk.js",
+  "static/js/1.f09e6fa9.chunk.js.map": "/VoiceAtm/static/js/1.f09e6fa9.chunk.js.map",
+  "runtime~main.js": "/VoiceAtm/static/js/runtime~main.d4edbf80.js",
+  "runtime~main.js.map": "/VoiceAtm/static/js/runtime~main.d4edbf80.js.map",
+  "static/media/App.css": "/VoiceAtm/static/media/background.22a8cce2.gif",
+  "static/css/main.bf2e9f8d.chunk.css.map": "/VoiceAtm/static/css/main.bf2e9f8d.chunk.css.map",
+  "index.html": "/VoiceAtm/index.html",
+  "precache-manifest.1229b3d86075591037113dd5e9d5311e.js": "/VoiceAtm/precache-manifest.1229b3d86075591037113dd5e9d5311e.js",
+  "service-worker.js": "/VoiceAtm/service-worker.js"
 }
