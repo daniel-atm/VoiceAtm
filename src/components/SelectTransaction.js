@@ -45,10 +45,10 @@ class SelectTransaction extends Component {
                     </div>
                     <div style={rowStyle}>
                         <Button size="large" variant="contained" color="primary" onClick={this.buttonClick}>Balance</Button>
-                        <Button size="large" variant="contained" color="primary" onClick={this.buttonClick}>Pay Bills</Button>
+                        <Button size="large" variant="contained" color="primary" onClick={this.buttonClick}>Change Pin</Button>
                     </div>
                     <div style={rowStyle}>
-                        <Button size="large" variant="contained" color="primary" onClick={this.buttonClick}>Change Pin</Button>
+                        
                         <Button size="large" variant="contained" color="primary" onClick={this.buttonClick}>Exit</Button>
                     </div>
                 </div>
