@@ -36,5 +36,5 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.1.6"
   },
-  "homepage":"https://israelalagbe.github.io/VoiceATM"
+  "homepage":"https://daniel-atm.github.io/VoiceAtm"
 }
