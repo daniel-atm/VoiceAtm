@@ -29,11 +29,14 @@ class SecretNumber extends Component {
         e && e.preventDefault();
         const { robot, next } = this.props;
         
-        if(this.password){
+        if(this.password && this.password.length==4){
         
             setTimeout(() => {
                 next()
             }, 500);
+        }
+        else{
+            await robot.say("You entered an invalid password")
         }
         
         //this.setStep(this.step + 1)
@@ -48,7 +51,7 @@ class SecretNumber extends Component {
                 <h1 style={{ color: 'blue', textAlign: 'center' }}>Please say your secret number</h1>
                 <form onSubmit={this.submit} style={{ textAlign: 'center' }}>
                     <FormControl margin="normal" required fullWidth style={{ border: '3px solid blue' }}>
-                        <Input onChange={(e)=>this.setPassword(e.target.value)} name="email" autoFocus value={this.password} />
+                        <Input onChange={(e)=>this.setPassword(e.target.value)}  type='number'  autoFocus value={this.password} />
                     </FormControl>
                 </form>
             </div>
