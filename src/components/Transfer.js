@@ -7,7 +7,7 @@ import Input from '@material-ui/core/Input';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import { sleep } from '../utils/sleep';
-import { MenuItem } from '@material-ui/core';
+import { MenuItem, InputLabel } from '@material-ui/core';
 class Transfer extends Component {
     amount = ''
     bank = ''
@@ -15,7 +15,8 @@ class Transfer extends Component {
         this.amount=amount
     }
     setBank = (bank)=>{
-        this.bank=bank
+        console.log(bank)
+        this.bank=bank;
     }
     componentDidMount() {
         this.listenToAmountToTransfer()
@@ -35,13 +36,14 @@ class Transfer extends Component {
                         <Input type='number'  name="amount" autoFocus onChange={(e)=>{  this.setAmount(e.target.value)   }} value={this.amount} required />
                     </FormControl>
                     <FormControl margin="normal" required fullWidth style={{ border: '3px solid blue' }}>
-                        <Select required value={this.bank} onChange={(e)=>{  this.setBank(e.target.value)   }}>
-                            <MenuItem value={''} disabled>Select Recipient Bank</MenuItem>
-                            <MenuItem>First Bank of Nigeria</MenuItem>
-                            <MenuItem>Guarantee Trust Bank</MenuItem>
-                            <MenuItem>United Bank of Africa</MenuItem>
-                            <MenuItem>Fidelity Bank</MenuItem>
-                            <MenuItem>Heritage Bank</MenuItem>
+                        <InputLabel htmlFor="bank-helper">Select Recipient Bank</InputLabel>
+                        <Select required value={this.bank} onChange={(e)=>{  this.setBank(e.target.value)   }} input={<Input name="bank" id="bank-helper" />}>
+                            <MenuItem value="" disabled selected>Select Recipient Bank</MenuItem>
+                            <MenuItem value={'First Bank of Nigeria'}>First Bank of Nigeria</MenuItem>
+                            <MenuItem value={'Guarantee Trust Bank'}>Guarantee Trust Bank</MenuItem>
+                            <MenuItem value={'United Bank of Africa'}>United Bank of Africa</MenuItem>
+                            <MenuItem value={'Fidelity Bank'}>Fidelity Bank</MenuItem>
+                            <MenuItem value={'Heritage Bank'}>Heritage Bank</MenuItem>
                         </Select>
                     </FormControl>
                     <FormControl margin="normal" required fullWidth >
@@ -58,8 +60,6 @@ export default withRouter(inject('robot')(
         bank: observable,
         amount: observable,
         setAmount: action,
-        setBank: action,
-        password: observable,
-        setPassword: action
+        setBank: action
     }))
 ));
