@@ -48,7 +48,7 @@ class SelectTransaction extends Component {
                         <Button size="large" variant="contained" color="primary" onClick={this.buttonClick}>Change Pin</Button>
                     </div>
                     <div style={rowStyle}>
-                        
+                        <Button size="large" variant="contained" color="primary" onClick={this.buttonClick} style={{visibility: 'hidden'}}>Pay Bills</Button>
                         <Button size="large" variant="contained" color="primary" onClick={this.buttonClick}>Exit</Button>
                     </div>
                 </div>

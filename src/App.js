@@ -15,6 +15,7 @@ import alertify from 'alertifyjs';
 import Transfer from './components/Transfer';
 import HaveNiceDay from './components/HaveNiceDay';
 import AccountBalance from './components/AccountBalance';
+import ChangePin from './components/ChangePin';
 
 class App extends Component {
   step = '';
@@ -74,6 +75,7 @@ class App extends Component {
           {this.step === 'transfer' ? <Transfer next={this.showHaveNiceDay} /> : null}
           {this.step === 'withdrawal' ? <Withdrawal next={this.showTakeCash} /> : null}
           {this.step === 'balance' ? <AccountBalance next={this.showHaveNiceDay}  /> : null}
+          {this.step === 'change pin' ? <ChangePin next={this.showHaveNiceDay}  /> : null}
           {this.step === 'take_cash' ? <TakeCash next={this.showHaveNiceDay}  /> : null}
           {this.step === 'have_nice_day' ? <HaveNiceDay  /> : null}
         </Card>
