@@ -37,7 +37,12 @@ class App extends Component {
     this.setStep("select_transaction");
   }
   showSelectAccountType = () => {
-    this.setStep("select_account_type");
+    if(this.type.toLowerCase()==='exit'){
+      this.setStep('have_nice_day');
+    }
+    else{
+      this.setStep("select_account_type");
+    }
     ///balance/i.test('balance')
   }
   showTakeCash = () => {
