@@ -33,7 +33,7 @@ class SecretNumber extends Component {
         
             setTimeout(() => {
                 next()
-            }, 500);
+            }, 200);
         }
         else{
             await robot.say("You entered an invalid password")

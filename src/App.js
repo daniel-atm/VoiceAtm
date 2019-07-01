@@ -12,6 +12,7 @@ import SelectAccountType from './components/SelectAccountType';
 import Withdrawal from './components/Withdrawal';
 import TakeCash from './components/TakeCash';
 import alertify from 'alertifyjs';
+import Transfer from './components/Transfer';
 
 class App extends Component {
   step = '';
@@ -46,7 +47,7 @@ class App extends Component {
   componentDidMount() {
     const { robot } = this.props;
     document.body.click()
-    alertify.alert("Click ok to continue", ()=>{
+    alertify.alert("Message","Click ok to continue", ()=>{
       robot.say("Welcome")
       this.showPincode()
     });
@@ -59,6 +60,8 @@ class App extends Component {
           {this.step === 'pincode' ? <SecretNumber next={this.showSelectTransaction} /> : null}
           {this.step === 'select_transaction' ? <SelectTransaction next={this.showSelectAccountType} setType={this.setType} /> : null}
           {this.step === 'select_account_type' ? <SelectAccountType next={this.nextAfterAccountType} /> : null}
+          {/* Next after select account type */}
+          {this.step === 'transfer' ? <Transfer next={this.showTakeCash} /> : null}
           {this.step === 'withdrawal' ? <Withdrawal next={this.showTakeCash} /> : null}
           {this.step === 'take_cash' ? <TakeCash next={this.nextAfterAccountType}  /> : null}
         </Card>
